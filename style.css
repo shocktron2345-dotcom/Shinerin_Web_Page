@@ -135,7 +135,9 @@ header hr {
 }
 
 .contact-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 15px 25px;
     background: linear-gradient(135deg, #1dd1a1 0%, #00b894 100%);
     border-radius: 50px;
@@ -169,10 +171,20 @@ header hr {
     box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
 }
 
+/* Hide image backgrounds */
 .contact-btn img {
-    width: 100%;
+    width: 100px;
     height: auto;
     display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.contact-btn.email img {
+    width: 80px;
+}
+
+.contact-btn.whatsapp img {
+    width: 100px;
 }
 
 /* Footer */
@@ -187,20 +199,82 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    header {
+        padding: 30px 15px;
+        margin-bottom: 30px;
     }
 
     .image-section img {
         width: 100%;
+        max-width: 90vw;
     }
 
     .contact-buttons {
         flex-direction: column;
         gap: 15px;
+        padding: 0 10px;
     }
 
     .contact-btn {
         width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 12px 20px;
+    }
+
+    .tagline {
+        padding: 20px;
+        font-size: 0.95rem;
+    }
+
+    .tagline p {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
+    .contact-section {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    .contact-section h3 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .dev-banner h2 {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+        letter-spacing: 0.5px;
+    }
+
+    .image-section img {
+        max-width: 100%;
+    }
+
+    .contact-btn img {
+        width: 60px;
+    }
+
+    .contact-btn.email img {
+        width: 50px;
+    }
+
+    .contact-btn.whatsapp img {
+        width: 70px;
     }
 }
 
