@@ -141,6 +141,52 @@
             <p class="pricing-note">📧 Contact us for a custom quote tailored to your specific needs!</p>
         </section>
 
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item open">
+                    <button class="faq-question" type="button">
+                        <span>How long does a website take?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Most simple projects take about 1 to 3 weeks, depending on the number of pages, features, and revisions requested.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Do you offer redesigns?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes! I can redesign an existing website to make it look more modern, cleaner, and more professional.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Can I request changes after the design?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Absolutely. I offer revisions so the final result matches your vision and business goals as closely as possible.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button">
+                        <span>Do you make mobile-friendly websites?</span>
+                        <span>+</span>
+                    </button>
+                    <div class="faq-answer">
+                        Yes. Every website I create is designed to look and work great on desktop, tablet, and mobile devices.
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Why Choose Us Section -->
         <section class="why-choose-section">
             <h2>Why Choose Shinerin?</h2>
@@ -226,6 +272,14 @@
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 hamburger.classList.remove('active');
+            });
+        });
+
+        // FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('open');
             });
         });
 
