@@ -1,5 +1,10 @@
 /* Shinerin Web Page - Professional Creative Styling */
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 150px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +17,13 @@ body {
     color: #333;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     min-height: 100vh;
+}
+
+section[id],
+header[id],
+footer[id],
+#top {
+    scroll-margin-top: 150px;
 }
 
 /* Development Banner */
