@@ -21,6 +21,7 @@
             <ul class="nav-links">
                 <li><a href="#top" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -76,6 +77,58 @@
                     <p>Creative CSS styling that makes your website beautiful, functional, and memorable for your audience.</p>
                 </div>
             </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="pricing">
+            <h2>Pricing Plans</h2>
+            <p class="pricing-subtitle">Choose the plan that fits your needs. All prices are negotiable based on project scope.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-badge">Starter</div>
+                    <h3>Landing Page</h3>
+                    <p class="price">Coming Soon</p>
+                    <ul class="pricing-features">
+                        <li>✓ Single page design</li>
+                        <li>✓ Responsive layout</li>
+                        <li>✓ Contact form</li>
+                        <li>✓ Mobile optimized</li>
+                        <li>✗ Advanced features</li>
+                    </ul>
+                    <button class="pricing-btn" disabled>Price TBA</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge featured">Popular</div>
+                    <h3>Business Website</h3>
+                    <p class="price">Coming Soon</p>
+                    <ul class="pricing-features">
+                        <li>✓ Multiple pages</li>
+                        <li>✓ Responsive design</li>
+                        <li>✓ Services showcase</li>
+                        <li>✓ Portfolio section</li>
+                        <li>✓ Contact integration</li>
+                        <li>✓ SEO optimized</li>
+                    </ul>
+                    <button class="pricing-btn featured">Price TBA</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-badge">Premium</div>
+                    <h3>Custom Website</h3>
+                    <p class="price">Coming Soon</p>
+                    <ul class="pricing-features">
+                        <li>✓ Fully custom design</li>
+                        <li>✓ Advanced features</li>
+                        <li>✓ E-commerce ready</li>
+                        <li>✓ Database integration</li>
+                        <li>✓ Animation & effects</li>
+                        <li>✓ Premium support</li>
+                    </ul>
+                    <button class="pricing-btn">Price TBA</button>
+                </div>
+            </div>
+            <p class="pricing-note">📧 Contact us for a custom quote tailored to your specific needs!</p>
         </section>
 
         <!-- Why Choose Us Section -->
@@ -166,7 +219,7 @@
             });
         });
 
-        // Smooth scrolling with offset for navbar
+        // Smooth scrolling with offset for navbar + banner
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
