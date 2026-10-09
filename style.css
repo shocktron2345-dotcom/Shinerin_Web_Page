@@ -290,6 +290,156 @@ header hr {
     line-height: 1.6;
 }
 
+/* Pricing Section */
+.pricing-section {
+    margin: 60px 0;
+}
+
+.pricing-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #667eea;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.pricing-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+    text-align: center;
+    transition: all 0.3s ease;
+    border-top: 5px solid #667eea;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+    border-top: 5px solid #1dd1a1;
+    transform: scale(1.05);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 20px 50px rgba(29, 209, 161, 0.2);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pricing-badge.featured {
+    background: linear-gradient(135deg, #1dd1a1 0%, #00b894 100%);
+}
+
+.pricing-card h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin: 15px 0 20px 0;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 1.8rem;
+    color: #667eea;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 30px 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    padding: 12px 0;
+    color: #666;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features li:hover {
+    color: #667eea;
+    padding-left: 8px;
+}
+
+.pricing-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    opacity: 0.7;
+}
+
+.pricing-btn.featured {
+    background: linear-gradient(135deg, #1dd1a1 0%, #00b894 100%);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.pricing-btn.featured:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(29, 209, 161, 0.3);
+}
+
+.pricing-note {
+    text-align: center;
+    color: #667eea;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
 /* Why Choose Us Section */
 .why-choose-section {
     background: linear-gradient(135deg, #1dd1a1 0%, #00b894 100%);
@@ -610,6 +760,7 @@ footer {
     }
 
     .services-section h2,
+    .pricing-section h2,
     .why-choose-section h2,
     .portfolio-section h2 {
         font-size: 1.8rem;
@@ -617,15 +768,25 @@ footer {
     }
 
     .services-grid,
+    .pricing-grid,
     .features-grid,
     .portfolio-grid {
         gap: 20px;
     }
 
     .service-card,
+    .pricing-card,
     .feature-item,
     .portfolio-card {
         padding: 20px;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+
+    .pricing-card.featured:hover {
+        transform: scale(1) translateY(-10px);
     }
 
     .service-icon,
@@ -635,6 +796,10 @@ footer {
 
     .why-choose-section {
         padding: 30px 20px;
+    }
+
+    .pricing-subtitle {
+        margin-bottom: 30px;
     }
 }
 
@@ -661,6 +826,7 @@ footer {
     }
 
     .services-grid,
+    .pricing-grid,
     .features-grid,
     .portfolio-grid {
         grid-template-columns: 1fr;
@@ -668,9 +834,26 @@ footer {
 
     .about-section h2,
     .services-section h2,
+    .pricing-section h2,
     .why-choose-section h2,
     .portfolio-section h2 {
         font-size: 1.4rem;
+    }
+
+    .pricing-card {
+        padding: 25px 20px;
+    }
+
+    .pricing-badge {
+        font-size: 0.75rem;
+    }
+
+    .pricing-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
     }
 }
 
