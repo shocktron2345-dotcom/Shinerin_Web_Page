@@ -607,6 +607,50 @@ header hr {
     padding: 0 22px 20px 22px;
 }
 
+/* Trust badges */
+.trust-section {
+    margin: 40px 0 60px 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.trust-badge {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(102, 126, 234, 0.15);
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trust-badge:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.trust-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.trust-badge h3 {
+    color: #667eea;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.trust-badge p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
 /* Why Choose Us Section */
 .why-choose-section {
     background: linear-gradient(135deg, #1dd1a1 0%, #00b894 100%);
