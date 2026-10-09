@@ -538,6 +538,75 @@ header hr {
     border-left: 4px solid #667eea;
 }
 
+/* FAQ Section */
+.faq-section {
+    margin: 60px 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #667eea;
+    margin-bottom: 30px;
+}
+
+.faq-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.faq-item {
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #1dd1a1;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 20px 22px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.faq-question:hover {
+    background: rgba(102, 126, 234, 0.04);
+}
+
+.faq-question span:last-child {
+    font-size: 1.5rem;
+    color: #667eea;
+    transition: transform 0.2s ease;
+}
+
+.faq-item.open .faq-question span:last-child {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.25s ease;
+    padding: 0 22px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 220px;
+    padding: 0 22px 20px 22px;
+}
+
 /* Why Choose Us Section */
 .why-choose-section {
     background: linear-gradient(135deg, #1dd1a1 0%, #00b894 100%);
@@ -874,6 +943,7 @@ footer {
 
     .services-section h2,
     .pricing-section h2,
+    .faq-section h2,
     .why-choose-section h2,
     .portfolio-section h2 {
         font-size: 1.8rem;
@@ -975,6 +1045,7 @@ footer {
     .about-section h2,
     .services-section h2,
     .pricing-section h2,
+    .faq-section h2,
     .why-choose-section h2,
     .portfolio-section h2 {
         font-size: 1.4rem;
